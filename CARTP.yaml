@@ -13,7 +13,7 @@ metadata:
     run: busybox
     app: busybox
     name: kali1
-  name: poda
+  name: PodA
   namespace: calico-isolation
 spec:
   containers:
@@ -23,21 +23,21 @@ spec:
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: poda1
+    name: A1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: poda2
+    name: A2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: poda3
+    name: A3
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
@@ -52,7 +52,7 @@ metadata:
     run: busybox
     app: busybox
     name: kali2
-  name: podb
+  name: PodB
   namespace: calico-isolation
 spec:
   containers:
@@ -62,21 +62,21 @@ spec:
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: podb1
+    name: B1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: podb2
+    name: B2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: podb3
+    name: B3
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
@@ -91,7 +91,7 @@ metadata:
     run: busybox
     app: busybox
     name: kali3
-  name: podc
+  name: PodC
   namespace: calico-isolation
 spec:
   containers:
@@ -101,21 +101,21 @@ spec:
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: podc1
+    name: C1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: podc2
+    name: C2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: podc3
+    name: C3
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
