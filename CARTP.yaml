@@ -1,0 +1,133 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: calico-isolation
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: busybox
+    app: busybox
+    name: kali1
+  name: PODA
+  namespace: calico-isolation
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODA1
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODA2
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODA3
+  restartPolicy: Never
+  nodeSelector:
+    kubernetes.io/os: linux
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: busybox
+    app: busybox
+    name: kali2
+  name: PODB
+  namespace: calico-isolation
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODB1
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODB2
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODB3
+  restartPolicy: Never
+  nodeSelector:
+    kubernetes.io/os: linux
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: busybox
+    app: busybox
+    name: kali3
+  name: PODC
+  namespace: calico-isolation
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODC1
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODC2
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile1
+    imagePullPolicy: Always
+    name: PODC3
+  restartPolicy: Never
+  nodeSelector:
+    kubernetes.io/os: linux
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: denycomms
+  namespace: calico-isolation
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
