@@ -13,7 +13,7 @@ metadata:
     run: busybox
     app: busybox
     name: kali1
-  name: PODA
+  name: poda
   namespace: calico-isolation
 spec:
   containers:
@@ -23,21 +23,21 @@ spec:
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODA1
+    name: poda1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODA2
+    name: poda2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODA3
+    name: poda3
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
@@ -52,7 +52,7 @@ metadata:
     run: busybox
     app: busybox
     name: kali2
-  name: PODB
+  name: podb
   namespace: calico-isolation
 spec:
   containers:
@@ -62,21 +62,21 @@ spec:
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODB1
+    name: podb1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODB2
+    name: podb2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODB3
+    name: podb3
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
@@ -91,7 +91,7 @@ metadata:
     run: busybox
     app: busybox
     name: kali3
-  name: PODC
+  name: podc
   namespace: calico-isolation
 spec:
   containers:
@@ -101,21 +101,21 @@ spec:
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODC1
+    name: podc1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODC2
+    name: podc2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
     image: zcbarnes1298/autodockerfile1
     imagePullPolicy: Always
-    name: PODC3
+    name: podc3
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
