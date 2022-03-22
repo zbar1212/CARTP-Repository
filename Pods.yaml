@@ -21,21 +21,21 @@ spec:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: poda1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: poda2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: poda3
   restartPolicy: Never
@@ -60,21 +60,21 @@ spec:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podb1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podb2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podb3
   restartPolicy: Never
@@ -99,21 +99,21 @@ spec:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podc1
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podc2
   - args:
     - /bin/sh
     - -c
     - ls; sleep 15780000
-    image: zcbarnes1298/autodockerfile1
+    image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podc3
   restartPolicy: Never
