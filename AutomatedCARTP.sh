@@ -1,6 +1,8 @@
 #!/bin/sh
 #CARTP automation build
 
+#git clone https://github.com/zbar1212/CARTP-Tool-Repository.git
+
 #update and upgrade platform and install tools
 sudo apt-get -y update #(if missing key to update copy missing key and type: sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 'keyname')
 sudo apt-get -y upgrade
@@ -35,7 +37,7 @@ sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-l
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 sudo apt-get -y update
 minikube start --nodes=2 #(dont start bash with sudo)
-minikube status
+minikube status #(enable VT-X/AMD-v)
 
 #install kubernetes (kubectl)
 sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -45,7 +47,6 @@ sudo apt-get -y update
 sudo kubectl version --client
 
 #Apply The Three Kubernetes Pods
-sudo git clone https://github.com/zbar1212/CARTP-Tool-Repository.git
 cd CARTP-Tool-Repository
 kubectl apply -f CARTP.yaml
 kubectl describe pods --namespace calico-isolation
