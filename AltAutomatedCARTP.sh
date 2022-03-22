@@ -9,7 +9,6 @@ sudo apt-get -y upgrade
 sudo apt-get install -y curl
 sudo apt-get install -y git
 sudo apt-get install -y openssh-server
-sudo systemctl status ssh
 sudo ufw all ssh
 sudo systemctl enable -now ssh
 sudo apt-get install -y ca-certificates #(issues try sudo apt-get install --reinstall ca-certificates)
