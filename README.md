@@ -61,6 +61,7 @@ Vega
 ZapProxy
 sqlmap
 sqlninja
+oscanner 
 WPScan
 Joomscan
 SSL Scanning Tools
@@ -68,3 +69,5 @@ w3af
 
 #Social Engineering 
 Social-Engineer Toolkit 
+
+#
