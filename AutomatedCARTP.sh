@@ -48,6 +48,6 @@ sudo kubectl version --client
 
 #Apply The Three Kubernetes Pods
 cd CARTP-Tool-Repository
-kubectl apply -f CARTP.yaml
+kubectl apply -f PODS.yaml
 kubectl describe pods --namespace calico-isolation
 kubectl get pods --namespace calico-isolation
