@@ -18,9 +18,9 @@ RUN apt-get install -y kali-tools-reverse-engineering
 RUN apt-get install -y kali-tools-database
 RUN apt-get install -y kali-tools-web
 RUN apt-get install -y kali-tools-social-engineering
-RUN mkdir ToolRepository
-RUN cd ToolRepository
+RUN git clone https://github.com/zbar1212/VPN-Service.git
 RUN git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
 RUN git clone https://github.com/sullo/nikto.git
 RUN git clone https://github.com/Ganapati/RsaCtfTool.git
 RUN git clone https://github.com/stealthcopter/deepce.git
+RUN mkdir ToolRepository
