@@ -2,7 +2,7 @@
 Tools for CARTP Platform
 
 #How to Start Pods
-bash AutomatedCARTP1.sh
+bash AltAutomatedCARTP.sh or AutomatedCARTP.sh
 
 #How to Get Pods Status
 kubectl get pods --namespace calico-isolation
