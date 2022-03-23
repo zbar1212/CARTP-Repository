@@ -24,6 +24,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: poda1
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   - args:
     - /bin/sh
     - -c
@@ -31,6 +34,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: poda2
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   - args:
     - /bin/sh
     - -c
@@ -38,6 +44,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: poda3
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
@@ -63,6 +72,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podb1
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   - args:
     - /bin/sh
     - -c
@@ -70,6 +82,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podb2
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   - args:
     - /bin/sh
     - -c
@@ -77,6 +92,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podb3
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
@@ -102,6 +120,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podc1
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   - args:
     - /bin/sh
     - -c
@@ -109,6 +130,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podc2
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   - args:
     - /bin/sh
     - -c
@@ -116,6 +140,9 @@ spec:
     image: zcbarnes1298/autodockerfile2
     imagePullPolicy: Always
     name: podc3
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
