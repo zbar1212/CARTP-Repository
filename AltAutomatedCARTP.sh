@@ -48,3 +48,4 @@ cd CARTP-Tool-Repository
 kubectl apply -f Pods.yaml
 kubectl describe pods --namespace calico-isolation
 kubectl get pods --namespace calico-isolation
+
