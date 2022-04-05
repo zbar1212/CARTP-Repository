@@ -149,8 +149,6 @@ spec:
 
 ---
 
----
-
 apiVersion: v1
 kind: Pod
 metadata:
@@ -158,7 +156,7 @@ metadata:
   labels:
     run: busybox
     app: busybox
-    name: kali1
+    name: kali4
   name: podd
   namespace: calico-isolation
 spec:
@@ -206,7 +204,7 @@ metadata:
   labels:
     run: busybox
     app: busybox
-    name: kali2
+    name: kali5
   name: pode
   namespace: calico-isolation
 spec:
@@ -254,7 +252,7 @@ metadata:
   labels:
     run: busybox
     app: busybox
-    name: kali3
+    name: kali6
   name: podf
   namespace: calico-isolation
 spec:
@@ -292,7 +290,152 @@ spec:
   restartPolicy: Never
   nodeSelector:
     kubernetes.io/os: linux
+    
+---
 
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: busybox
+    app: busybox
+    name: kali7
+  name: podg
+  namespace: calico-isolation
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podg1
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podg2
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podg3
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  restartPolicy: Never
+  nodeSelector:
+    kubernetes.io/os: linux
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: busybox
+    app: busybox
+    name: kali8
+  name: podh
+  namespace: calico-isolation
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podh1
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podh2
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podh3
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  restartPolicy: Never
+  nodeSelector:
+    kubernetes.io/os: linux
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: busybox
+    app: busybox
+    name: kali9
+  name: podi
+  namespace: calico-isolation
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podi1
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podi2
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  - args:
+    - /bin/sh
+    - -c
+    - ls; sleep 15780000
+    image: zcbarnes1298/autodockerfile2
+    imagePullPolicy: Always
+    name: podi3
+    securityContext:
+      allowPrivilegeEscalation: true
+      privileged: true
+  restartPolicy: Never
+  nodeSelector:
+    kubernetes.io/os: linux
+
+---
 
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
