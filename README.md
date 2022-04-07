@@ -1,5 +1,5 @@
-#CARTP-Repository
-- How to Use CARTP
+#CARTP-Repository (step-by-step)
+- How to Use CARTP (case sensitive)
 
 #Clone the Platform to the Server
   - git clone https://github.com/zbar1212/CARTP-Repository.git
@@ -13,6 +13,7 @@
   - AutomatedCARTP.sh
 
   #How to Start Pods (Once bash AutomatedCARTP.sh is run then the pods will already be up)
+  - cd 'Pod and Container Usage'
   - kubectl apply -f Pods.yaml, or
   - bash build-up.sh
   
@@ -20,10 +21,12 @@
   - kubectl get pods --namespace calico-isolation
 
   #How to Delete Pods
+  - cd 'Pod and Container Usage'
   - kubectl delete pods [pod name] --namespace calico-isolation, or
   - bash tear-down.sh
 
   #How to Log Into Container Through the Pods
+  - cd 'Pod and Container Usage'
   - kubectl exec --namespace calico-isolation -it [pod name] -c [container name] /bin/bash, or
   - bash con-a[#], bash con-b[#], bash con-c[#]
 
@@ -33,7 +36,8 @@
 #Usage of VPN
   - First, log into the contain and use OpenVPN by changing directory to 'VPN-Service' and then use 'bash VPNStart.sh' to start VPN to connect to TryHackMe
   - Second, the container should read 'Initialization Sequence Completed' at the end and leave that command line open
-  - Third, Open another command line and relogin into the same container 
+  - Third, Open another powershell and log into server again (starts a second command line)
+  - Fourth, change directory into 'CARTP-Repository' and 'Pod and Container Usage' and relogin into same container that was used
   
 #Load attack Tools
   - Once logged into the same container of the second command line window:
