@@ -1,10 +1,11 @@
 #CARTP-Repository
-- How to Use Platform
+- How to Use CARTP
 
 #Clone the Platform to the Server
   - git clone https://github.com/zbar1212/CARTP-Repository.git
 
-#Pods Usage
+#Pods Usage (How to use the Platform)
+
   #How to Start Platform
   - bash AltAutomatedCARTP.sh, or 
   - AutomatedCARTP.sh
