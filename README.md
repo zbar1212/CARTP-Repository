@@ -5,7 +5,9 @@
   - git clone https://github.com/zbar1212/CARTP-Repository.git
 
 #Pods Usage (How to use the Platform)
-
+  - cd 'CARTP-Repository'
+  - use 'ls' to see all the files within repository
+  
   #How to Start Platform
   - bash AltAutomatedCARTP.sh, or 
   - AutomatedCARTP.sh
